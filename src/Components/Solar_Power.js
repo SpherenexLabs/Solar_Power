@@ -82,6 +82,7 @@ function SolarPower() {
     drawSineWave(canvasRefs.carVoltage.current, dataHistory.Car_Voltage, '#f59e0b', 'V');
     drawSineWave(canvasRefs.solarVoltage.current, dataHistory.Wired_Voltage, '#ef4444', 'V');
     drawSineWave(canvasRefs.wirelessVoltage.current, dataHistory.Wireless_Voltage, '#8b5cf6', 'V');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dataHistory]);
 
   const drawSineWave = (canvas, data, color, unit) => {
