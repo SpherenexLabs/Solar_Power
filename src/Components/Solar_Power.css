@@ -1,0 +1,375 @@
+/* Solar Power Container */
+.solar-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Section */
+.solar-header {
+  text-align: center;
+  margin-bottom: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.solar-title {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.solar-subtitle {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.live-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #51cf66, #37b24d);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+/* Solar Cards Grid */
+.solar-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Solar Card */
+.solar-card {
+  background: white;
+  border-radius: 16px;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-top: 4px solid;
+}
+
+.solar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Battery Card */
+.battery-card {
+  border-top-color: #6366f1;
+}
+
+/* Current Card */
+.current-card {
+  border-top-color: #10b981;
+}
+
+/* Voltage Card */
+.voltage-card {
+  border-top-color: #f59e0b;
+}
+
+/* Solar Voltage Card */
+.solar-voltage-card {
+  border-top-color: #ef4444;
+}
+
+/* Wireless Card */
+.wireless-card {
+  border-top-color: #8b5cf6;
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 20px 15px 20px;
+  border-bottom: none;
+}
+
+.card-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+/* Card Body */
+.card-body {
+  padding: 0 20px 20px 20px;
+  text-align: center;
+}
+
+.main-value {
+  font-size: 2.8rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.main-value .unit {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-left: 4px;
+  font-weight: 500;
+}
+
+.sub-label {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Graph Wrapper */
+.card-graph-wrapper {
+  border-top: 1px solid #f1f5f9;
+  background: #fafafa;
+  padding: 15px;
+}
+
+.graph-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 5px;
+}
+
+.graph-title {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.graph-value {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Card Graph */
+.card-graph {
+  background: white;
+  border-radius: 8px;
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.card-graph canvas {
+  width: 100% !important;
+  height: 150px !important;
+  display: block;
+}
+
+/* System Overview */
+.system-overview {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.system-overview h2 {
+  color: #495057;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #f59e0b;
+  padding-bottom: 10px;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.overview-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #f59e0b;
+}
+
+.overview-label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 1rem;
+}
+
+.overview-value {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #667eea;
+}
+
+/* Status Section */
+.status-section {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.status-section h3 {
+  margin: 0 0 25px 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.status-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.status-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.status-card.active-source {
+  border-color: #51cf66;
+  background: rgba(81, 207, 102, 0.2);
+}
+
+.status-card.inactive-source {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.status-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.status-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.status-value {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .solar-title {
+    font-size: 2rem;
+  }
+
+  .solar-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-value {
+    font-size: 2.5rem;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .solar-container {
+    padding: 20px 10px;
+  }
+
+  .solar-header {
+    padding: 20px;
+  }
+
+  .solar-title {
+    font-size: 1.5rem;
+  }
+
+  .solar-card {
+    padding: 20px;
+  }
+
+  .main-value {
+    font-size: 2rem;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+  }
+}
